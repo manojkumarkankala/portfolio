@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kankala Manojkumar | Frontend Developer | Modern, responsive and futuristic web experiences." />
+    <meta name="theme-color" content="#070A12" />
+
+    <title>Kankala Manojkumar — Frontend Developer Portfolio</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader__ring"></div>
+        <div class="loader__text">Loading Portfolio</div>
+    </div>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Particle Background -->
+    <canvas class="bg-particles" id="bgParticles" aria-hidden="true"></canvas>
+
+    <!-- Video background overlay (optional) -->
+    <div class="video-overlay" aria-hidden="true">
+        <div class="video-overlay__sheen"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="top">
+        <nav class="navbar__inner" aria-label="Primary navigation">
+            <a class="brand" href="#home" aria-label="Go to Home">
+                <span class="brand__mark" aria-hidden="true">KM</span>
+                <span class="brand__text">Manoj Kumar</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+
+            <div class="nav-links" id="navMenu" role="navigation">
+                <a class="nav-link" href="#home" data-nav="home">Home</a>
+                <a class="nav-link" href="#about" data-nav="about">About</a>
+                <a class="nav-link" href="#skills" data-nav="skills">Skills</a>
+                <a class="nav-link" href="#projects" data-nav="projects">Projects</a>
+                <a class="nav-link" href="#services" data-nav="services">Services</a>
+                <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle dark/light mode">
+                    <span class="btn__icon" aria-hidden="true">☾</span>
+                    <span class="btn__label">Theme</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="section hero" id="home">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <div class="kicker" data-reveal>
+                        <span class="kicker__dot" aria-hidden="true"></span>
+                        <span class="kicker__text">Frontend Developer • Modern Web Experiences</span>
+                    </div>
+
+                    <h1 class="hero__title" data-reveal>
+                        Hi, I’m <span class="text-gradient">Manoj Kumar</span>
+                    </h1>
+                    <p class="hero__subtitle" data-reveal>Frontend Developer</p>
+
+                    <div class="typing" data-typing data-reveal>
+                        <span class="typing__label">I create </span>
+                        <span class="typing__text">modern and responsive websites.</span>
+                        <span class="typing__cursor" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="hero__actions" data-reveal>
+                        <a class="btn btn--primary" href="#projects">
+                            <span class="btn__glow" aria-hidden="true"></span>
+                            View Projects
+                        </a>
+                        <a class="btn btn--secondary" href="#contact">
+                            <span class="btn__glow" aria-hidden="true"></span>
+                            Hire Me
+                        </a>
+                        <a class="btn btn--link" href="#contact">Contact Me</a>
+                    </div>
+
+                    <div class="hero__meta" data-reveal>
+                        <div class="meta-pill"><span class="meta-pill__icon" aria-hidden="true">⚡</span> Fast & Clean UI</div>
+                        <div class="meta-pill"><span class="meta-pill__icon" aria-hidden="true">🧩</span> Component Driven</div>
+                        <div class="meta-pill"><span class="meta-pill__icon" aria-hidden="true">✨</span> Interactive Premium Feel</div>
+                    </div>
+                </div>
+
+                <aside class="hero__card" data-tilt data-reveal>
+                    <div class="hero-card glass">
+                        <div class="hero-card__border" aria-hidden="true"></div>
+                        <div class="profile">
+                            <div class="profile__img-wrap" aria-hidden="true">
+                                <img class="profile__img" src="https://res.cloudinary.com/dptxuxhbm/image/upload/v1778730657/WhatsApp_Image_2026-05-14_at_9.19.43_AM_yfvemi.jpg" loading="lazy" />
+                            </div>
+
+                            <div class="profile__name">Manoj Kumar</div>
+                            <div class="profile__role">Frontend Developer</div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="social" aria-label="Social links">
+                            <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+                                <span aria-hidden="true">⌁</span>
+                            </a>
+                            <a class="social__icon" href="https://www.linkedin.com/in/manoj-kumar-kankala-219043375/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <span aria-hidden="true">in</span>
+                            </a>
+                            <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="Twitter/X">
+                                <span aria-hidden="true">𝕏</span>
+                            </a>
+                            <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="Email">
+                                <span aria-hidden="true">@</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-card__stats">
+                            <div class="stat">
+                                <div class="stat__num" data-count="98">98</div>
+                                <div class="stat__label">UI Polish</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__num" data-count="100">100</div>
+                                <div class="stat__label">Responsive</div>
+                            </div>
+                        </div>
+
+                        <div class="hero-card__hint">Scroll to explore • Neon glass vibes ✦</div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <span class="scroll-indicator__dot"></span>
+                <span class="scroll-indicator__text">Explore</span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2 class="section-title">About</h2>
+                    <p class="section-subtitle">Premium UI/UX mindset with clean coding practices.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass" data-reveal>
+                        <div class="icon-badge" aria-hidden="true">✦</div>
+                        <h3 class="card-title">Passion for Frontend Development</h3>
+                        <p class="card-text">I craft smooth, modern user interfaces that feel fast and delightful. Every pixel matters—especially on mobile.</p>
+                    </div>
+                    <div class="about-card glass" data-reveal>
+                        <div class="icon-badge" aria-hidden="true">⌬</div>
+                        <h3 class="card-title">Creative UI/UX Design</h3>
+                        <p class="card-text">I design with clarity, rhythm, and accessibility in mind—glass layouts, neon accents, and elegant interactions.</p>
+                    </div>
+                    <div class="about-card glass" data-reveal>
+                        <div class="icon-badge" aria-hidden="true">⚙</div>
+                        <h3 class="card-title">Clean Coding Practices</h3>
+                        <p class="card-text">Reusable patterns, semantic HTML, and optimized JavaScript to keep performance sharp and maintenance easy.</p>
+                    </div>
+                    <div class="about-card glass" data-reveal>
+                        <div class="icon-badge" aria-hidden="true">⌁</div>
+                        <h3 class="card-title">Interactive Web Experiences</h3>
+                        <p class="card-text">Scroll reveals, 3D hover effects, typing animations, and premium micro-interactions for an award-level feel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2 class="section-title">Skills</h2>
+                    <p class="section-subtitle">Frontend tools and craft—built for responsive excellence.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card glass" data-reveal>
+                        <div class="skill-card__head">
+                            <h3 class="card-title">Frontend Essentials</h3>
+                            <span class="chip">Neon UI</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>HTML5</span><span class="skill__pct">95%</span></div>
+                            <div class="bar"><span style="--w:95%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>CSS3</span><span class="skill__pct">93%</span></div>
+                            <div class="bar"><span style="--w:93%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>JavaScript</span><span class="skill__pct">92%</span></div>
+                            <div class="bar"><span style="--w:92%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass" data-reveal>
+                        <div class="skill-card__head">
+                            <h3 class="card-title">Design & Responsiveness</h3>
+                            <span class="chip chip--alt">UX</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>Responsive Design</span><span class="skill__pct">95%</span></div>
+                            <div class="bar"><span style="--w:95%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>UI/UX Design</span><span class="skill__pct">90%</span></div>
+                            <div class="bar"><span style="--w:90%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>Bootstrap</span><span class="skill__pct">88%</span></div>
+                            <div class="bar"><span style="--w:88%"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass" data-reveal>
+                        <div class="skill-card__head">
+                            <h3 class="card-title">Modern Workflow</h3>
+                            <span class="chip chip--purple">Dev</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>Tailwind CSS</span><span class="skill__pct">89%</span></div>
+                            <div class="bar"><span style="--w:89%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>Git & GitHub</span><span class="skill__pct">91%</span></div>
+                            <div class="bar"><span style="--w:91%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__top"><span>Clean Components</span><span class="skill__pct">94%</span></div>
+                            <div class="bar"><span style="--w:94%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2 class="section-title">Services</h2>
+                    <p class="section-subtitle">Premium solutions for modern businesses and creators.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⌁</div>
+                        <h3 class="card-title">Responsive Website Design</h3>
+                        <p class="card-text">Device-first UI that looks stunning everywhere—mobile, tablet, and desktop.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⌬</div>
+                        <h3 class="card-title">Portfolio Websites</h3>
+                        <p class="card-text">Award-winning, interaction-rich portfolios for developers and creators.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⚡</div>
+                        <h3 class="card-title">Business Websites</h3>
+                        <p class="card-text">Clean landing pages with modern sections that convert and build trust.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">▣</div>
+                        <h3 class="card-title">Landing Pages</h3>
+                        <p class="card-text">Neon, glass, and high-performance layouts for campaigns and product launches.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⛩</div>
+                        <h3 class="card-title">Temple Websites</h3>
+                        <p class="card-text">Respectful, elegant designs with modern UI for events and devotees.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">✦</div>
+                        <h3 class="card-title">UI/UX Design</h3>
+                        <p class="card-text">Thoughtful UX flows, premium typography, and accessible design systems.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⌬</div>
+                        <h3 class="card-title">Modern Frontend Development</h3>
+                        <p class="card-text">Interactive micro-animations, smooth scrolling, and clean code architecture.</p>
+                    </article>
+                    <article class="service-card glass" data-reveal>
+                        <div class="service-card__icon" aria-hidden="true">⚙</div>
+                        <h3 class="card-title">Performance & SEO</h3>
+                        <p class="card-text">Fast loading, semantic HTML, and SEO-friendly structure for better visibility.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-head section-head--projects" data-reveal>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">Premium cards with hover glow, domain + URL, and live actions.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card glass" data-tilt data-project>
+                        <div class="project-card__media">
+                            <img class="project-card__img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="CodeTech project preview" loading="lazy" />
+                            <div class="project-card__overlay" aria-hidden="true"></div>
+
+                            <div class="project-card__thumb-wrap" aria-hidden="true">
+                                <img class="project-card__thumb" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80" alt="CodeTech screenshot thumbnail" loading="lazy" />
+                            </div>
+                        </div>
+
+                        <div class="project-card__body">
+                            <div class="project-card__top">
+                                <h3 class="project-card__title">CodeTech</h3>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <p class="project-card__desc">A modern responsive frontend development project with clean UI and interactive design.</p>
+
+                            <div class="project-card__meta">
+                                <div class="meta-row">
+                                    <span class="meta-row__k">Domain</span>
+                                    <span class="meta-row__v">codetech modern web devalopment</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-row__k">URL</span>
+                                    <span class="meta-row__v">https://codetech-sable.vercel.app/</span>
+                                </div>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a class="btn btn--primary btn--sm" href="https://codetech-sable.vercel.app/" target="_blank" rel="noopener">
+                                    <span class="btn__glow" aria-hidden="true"></span>
+                                    Live Website
+                                </a>
+                                <button class="btn btn--ghost btn--sm project-card__copy" type="button" data-copy="https://codetech-sable.vercel.app/">
+                                    <span class="btn__icon" aria-hidden="true">⧉</span>
+                                    Copy URL
+                                </button>
+                            </div>
+
+                            <div class="project-card__hint" aria-hidden="true">Click actions • Hover for glow</div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="gallery-note" data-reveal>
+                    Want more projects? This layout is ready for multiple cards.
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO GALLERY -->
+
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Let’s build something modern, responsive, and premium.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card glass" data-reveal>
+                        <h3 class="card-title">Send a Message</h3>
+                        <p class="card-text">Fill the form. You’ll get a confirmation UI instantly.</p>
+
+                        <form class="form" id="contactForm">
+                            <label class="field">
+                                <span class="field__label">Email</span>
+                                <input class="field__input" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+                            </label>
+
+                            <label class="field">
+                                <span class="field__label">Message</span>
+                                <textarea class="field__input field__textarea" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </label>
+
+                            <div class="form__actions">
+                                <button class="btn btn--primary" type="submit">
+                                    <span class="btn__glow" aria-hidden="true"></span>
+                                    Submit
+                                </button>
+                                <button class="btn btn--ghost" type="button" id="whatsappBtn">
+                                    <span class="btn__icon" aria-hidden="true">☎</span>
+                                    WhatsApp
+                                </button>
+                            </div>
+
+                            <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <div class="contact-side" data-reveal>
+                        <div class="glass contact-info">
+                            <div class="contact-info__row">
+                                <div class="contact-info__icon" aria-hidden="true">✉</div>
+                                <div>
+                                    <div class="contact-info__k">Email</div>
+                                    <div class="contact-info__v"><a href="mailto:kankalamanojkumar@gmail.com">kankalamanojkumar@gmail.com</a></div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info__row">
+                                <div class="contact-info__icon" aria-hidden="true">⌁</div>
+                                <div>
+                                    <div class="contact-info__k">Availability</div>
+                                    <div class="contact-info__v">Open for new projects</div>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="social social--vertical">
+                                <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="GitHub">⌁</a>
+                                <a class="social__icon" href="https://www.linkedin.com/in/manoj-kumar-kankala-219043375/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                                <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="Twitter/X">𝕏</a>
+                                <a class="social__icon" href="#" target="_blank" rel="noopener" aria-label="Email">@</a>
+                            </div>
+
+                            <div class="contact-info__note">Neon glass UI • Smooth interactions • Responsive by design</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer__inner">
+                <div class="footer__left">© <span id="year"></span> Manoj Kumar. All rights reserved.</div>
+                <div class="footer__right">
+                    <a class="footer__link" href="#top">Privacy</a>
+                    <a class="footer__link" href="#top">Terms</a>
+                </div>
+
+                <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+                    <span aria-hidden="true">↑</span>
+                </button>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
